@@ -1,0 +1,38 @@
+void showThemeSheet(BuildContext context){
+
+showModalBottomSheet(
+
+context: context,
+
+builder:(_){
+
+return Column(
+
+mainAxisSize: MainAxisSize.min,
+
+children: const[
+
+ListTile(
+leading: Icon(Icons.light_mode),
+title: Text("Light"),
+),
+
+ListTile(
+leading: Icon(Icons.dark_mode),
+title: Text("Dark"),
+),
+
+ListTile(
+leading: Icon(Icons.phone_android),
+title: Text("System"),
+),
+
+],
+
+);
+
+},
+
+);
+
+}
