@@ -1,0 +1,79 @@
+void showEditProfileSheet(BuildContext context) {
+
+  showModalBottomSheet(
+
+    context: context,
+
+    isScrollControlled: true,
+
+    shape: const RoundedRectangleBorder(
+      borderRadius: BorderRadius.vertical(
+        top: Radius.circular(24),
+      ),
+    ),
+
+    builder: (_) {
+
+      return Padding(
+
+        padding: EdgeInsets.only(
+          left: 20,
+          right: 20,
+          top: 20,
+          bottom: MediaQuery.of(context).viewInsets.bottom + 20,
+        ),
+
+        child: SingleChildScrollView(
+
+          child: Column(
+
+            mainAxisSize: MainAxisSize.min,
+
+            children: [
+
+              const Text(
+                "Edit Profile",
+                style: TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+
+              const SizedBox(height:20),
+
+              TextField(
+                decoration: InputDecoration(
+                  labelText: "Full Name",
+                ),
+              ),
+
+              const SizedBox(height:15),
+
+              TextField(
+                decoration: InputDecoration(
+                  labelText: "Phone Number",
+                ),
+              ),
+
+              const SizedBox(height:25),
+
+              FilledButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: const Text("Save"),
+              ),
+
+            ],
+
+          ),
+
+        ),
+
+      );
+
+    },
+
+  );
+
+}
