@@ -1,0 +1,12 @@
+showModalBottomSheet(
+  context: context,
+  isScrollControlled: true,
+  builder: (_) {
+    return const SizedBox(
+      height: 500,
+      child: Center(
+        child: Text("AI Conversation History"),
+      ),
+    );
+  },
+);
