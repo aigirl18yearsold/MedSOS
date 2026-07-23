@@ -1,0 +1,44 @@
+showDialog(
+
+context: context,
+
+builder:(_){
+
+return AlertDialog(
+
+title: const Text(
+"Delete Account"
+),
+
+content: const Text(
+"This action cannot be undone."
+),
+
+actions:[
+
+TextButton(
+onPressed: (){
+Navigator.pop(context);
+},
+child: const Text("Cancel"),
+),
+
+FilledButton(
+style: FilledButton.styleFrom(
+backgroundColor: Colors.red,
+),
+onPressed: (){
+
+// Delete Account
+
+},
+child: const Text("Delete"),
+),
+
+],
+
+);
+
+},
+
+);
