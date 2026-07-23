@@ -1,0 +1,38 @@
+void showLanguageSheet(BuildContext context){
+
+showModalBottomSheet(
+
+context: context,
+
+builder:(_){
+
+return Column(
+
+mainAxisSize: MainAxisSize.min,
+
+children: const[
+
+ListTile(
+title: Text("English"),
+leading: Icon(Icons.language),
+),
+
+ListTile(
+title: Text("বাংলা"),
+leading: Icon(Icons.language),
+),
+
+ListTile(
+title: Text("हिन्दी"),
+leading: Icon(Icons.language),
+),
+
+],
+
+);
+
+},
+
+);
+
+}
